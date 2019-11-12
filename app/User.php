@@ -57,4 +57,14 @@ class User extends Authenticatable
     {
         return $this->belongsTo(Polytechnic::class, 'polytechnic_id', 'id');
     }
+
+    public function uni()
+    {
+        return $this->belongsTo(University::class, 'university_id', 'id');
+    }
+
+    public function department()
+    {
+        return $this->belongsTo(Department::class, 'department_id', 'id');
+    }
 }
