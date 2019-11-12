@@ -13,7 +13,7 @@ class Question extends Model
 
     public function objective()
     {
-        return $this->belongsTo(Objective::class, 'topic_id', 'id');
+        return $this->belongsTo(Objective::class, 'objective_id', 'id');
     }
 
     //get Topic Through Obj

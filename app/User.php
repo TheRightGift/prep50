@@ -43,6 +43,11 @@ class User extends Authenticatable
         //return $this->belongsTo(Category::class, 'category_id', 'id');
     }
 
+    public function activities()
+    {
+        return $this->hasMany('App\Activity');
+    }
+
     public function state()
     {
         return $this->belongsTo(State::class, 'state_id', 'id');
