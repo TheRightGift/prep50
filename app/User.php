@@ -16,7 +16,7 @@ class User extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'name', 'email', 'password',
+        'firstname', 'othername', 'lastname', 'email', 'password', 'phone', 'dateReg', 'gender', 'img', 'totalCoinsAccrued', 'totalCurrentCoin', 'nextPayment', 'state_id', 'polytechnic_id', 'university_id', 'department_id',
     ];
 
     /**
@@ -36,4 +36,20 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+    public function subjects()
+    {
+        return $this->hasMany('App\Subject');
+        //return $this->belongsTo(Category::class, 'category_id', 'id');
+    }
+
+    public function state()
+    {
+        return $this->belongsTo(State::class, 'state_id', 'id');
+    }
+
+    public function poly()
+    {
+        return $this->belongsTo(Polytechnic::class, 'polytechnic_id', 'id');
+    }
 }
