@@ -15,3 +15,5 @@ Route::get('/', function () {
     return view('welcome');
 });
 route::get('/topics/{topic}', 'TopicsController@edit');
+Route::get('subject', 'SubjectsController');
+
