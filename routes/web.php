@@ -17,7 +17,7 @@ Route::get('/', function () {
 //for topics
 route::get('/topics/{topic}', 'TopicsController@edit');
 route::get('/topics/{topic}', 'TopicsController@delete');
-
+route::get('/topics/{topic}', 'TopicsController@getOneTopic');
 
 
 //for objective
