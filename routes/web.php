@@ -14,17 +14,4 @@
 Route::get('/', function () {
     return view('welcome');
 });
-//for topics
-route::get('/topics/{topic}', 'TopicsController@edit');
-route::get('/topics/{topic}', 'TopicsController@delete');
-route::get('/topics/{topic}', 'TopicsController@getOneTopic');
-
-
-//for objective
-route::get('/Objectives/{Objective}', 'ObjectivesController@getAll');
-route::get('/Objectives/{Objective}', 'ObjectivesController@getOne');
-route::get('/Objectives/{Objective}', 'ObjectivesController@getObjectivesInTopics');
-route::get('/Objectives/{Objective}', 'ObjectivesController@getAllObjectsInSubjects');
-
-
 
