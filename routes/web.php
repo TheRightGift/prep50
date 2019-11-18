@@ -14,6 +14,7 @@
 Route::get('/', function () {
     return view('welcome');
 });
-route::get('/topics/{topic}', 'TopicsController@edit');
-Route::get('subject', 'SubjectsController');
+//Route::get('/topics/{topic}', 'TopicsController@edit');
+//Route::resource('subject', 'SubjectsController');
+//Route::resource('activities', 'ActivitiesController');
 
