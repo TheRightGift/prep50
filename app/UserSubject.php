@@ -23,6 +23,6 @@ class UserSubject extends Model
 
     public function activities()
     {
-        return $this->hasMany('App\Activity');
+        return $this->hasMany('App\Activity', 'userSubject_id', 'subject_id');
     }
 }
