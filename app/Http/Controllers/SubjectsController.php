@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Subject;
+use App\UserSubject;
 
 class SubjectsController extends Controller
 {
@@ -12,7 +13,11 @@ class SubjectsController extends Controller
 
         $subjects = Subject::all();
         return view('subjects.index')->with('subjects',$subjects);
-     }
+    }
+
+    public function getUserSubjects($user_id){
+        
+    }
 
     public function getOneSubject($id)
     {

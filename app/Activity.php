@@ -16,6 +16,11 @@ class Activity extends Model
         return $this->belongsTo(Objective::class, 'objective_id', 'id');
     }
 
+    public function userSubject()
+    {
+        return $this->belongsTo(UserSubject::class, 'userSubject_id', 'id');
+    }
+
     public function user()
     {
         return $this->belongsTo(Objective::class, 'user_id', 'id');

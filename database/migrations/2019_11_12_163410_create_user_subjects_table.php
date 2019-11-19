@@ -17,10 +17,10 @@ class CreateUserSubjectsTable extends Migration
             $table->bigIncrements('id');
             $table->timestamps();
             $table->bigInteger('user_id')->unsigned();     
-            $table->bigInteger('objective_id')->unsigned(); 
+            $table->bigInteger('subject_id')->unsigned(); 
             
             $table->foreign('user_id')->references('id')->on('users')->onUpdate('cascade');
-            $table->foreign('objective_id')->references('id')->on('objectives')->onUpdate('cascade');
+            $table->foreign('subject_id')->references('id')->on('subjects')->onUpdate('cascade');
         });
     }
 
