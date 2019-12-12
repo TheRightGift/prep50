@@ -9,23 +9,28 @@ class ObjectiveController extends Controller
 {
     public function getAllObjective()
     {
-
-
+        $allObj = Objective::all();
+        return $allobj;
     }
 
     public function getOneObjective($id)
     {
-
-        
+        $oneObject = Objective:: find($id);
+        return $oneObject;
     }
 
     public function getAllObjectiveInTopic($id)
     {
+        $allObjectiveinTopic= Objective::where();
+        return $allObjectiveinTopic;
 
         
     }
     public function getAllObjectiveInSubject($id)
     {
+        $allObjectiveinSubj = Objective::where();
+        return $allObjectiveinSubj;
+
 
         
     }
