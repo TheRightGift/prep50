@@ -18,6 +18,7 @@ class CreateUsersTable extends Migration
             $table->string('firstname');
             $table->string('othername')->nullable();
             $table->string('lastname');
+            $table->string('regNum', 10);
             $table->string('phone')->unique();
             $table->date('dateReg');
             $table->enum('gender', ['M', 'F']);
