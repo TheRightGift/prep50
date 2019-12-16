@@ -9,41 +9,62 @@ class TopicsController extends Controller
 
 {
     ///controller for edit topic
-    public function edit(Topic $topic)
+    public function editTopic(Request $request, $id)
     {
-        return view('edit', compact('topic'));
+        $editSubject = Subject::where('id', $id)->first();
+
+        $isDone = $editSubject->update($request->all());
+
+        return response()->json($isDone);
     }
 
     //controller for del topic 
-    public function destroy(Topic $topic)
+    public function deleteTopic($id)
     {
-        $topic->delete();
+        $delTopic = Subject::find($id);
+        $delTopic->delete();
+        return $delTopic;
     }
 
     //getting all topics
-    public function get()
+    public function getAllTopics()
     {
-        return Request::all();
+        $topic = Topic::all();
+        return $topic;
     }
     
-    public function getOneTopic($id) {
-
-        
+    public function getOneTopic($id) 
+    {
+        $oneTopic = Topic::find($id);
+        return $oneTopic;
     }
 
-    public function getTopicsInSubjects($id) {
+    public function getTopicsInSubjects($id) 
+    {
+        $topicInSubject = Topic::where();
+        return $topicInSubject;
 
     }
 
-    public function getIdInSubject(){
+    public function getIdInSubject()
+    {
+        $idInSubject = Topic::where();
+        return $idInSubject;
+
 
     } 
 
     
-    public function getIdOfFirstTopicInSubject(){
+    public function getIdOfFirstTopicInSubject()
+    {
+        $firstidInSubject = Topic::where();
+        return $firstidInSubject;
         
     } 
-    public function getIdOfLastTopicInSubject(){
+    public function getIdOfLastTopicInSubject()
+    {
+        $lastidInSubject = Topic::where();
+        return $lastidInSubject;
         
     } 
 }
