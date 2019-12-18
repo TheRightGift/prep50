@@ -9,9 +9,9 @@ class TopicsController extends Controller
 
 {
     ///controller for edit topic
-    public function editTopic(Request $request, $id)
+    public function updateTopic(Request $request, $id)
     {
-        $editSubject = Subject::where('id', $id)->first();
+        $editSubject = Subject::find( $id)->first();
 
         $isDone = $editSubject->update($request->all());
 
@@ -39,31 +39,30 @@ class TopicsController extends Controller
         return $oneTopic;
     }
 
-    public function getTopicsInSubjects($id) 
+    public function getTopicsInSubjects($subj_id) 
     {
-        $topicInSubject = Topic::where();
+        $topicInSubject = Topic::where('subj_id',$subj_id)->get();
         return $topicInSubject;
 
     }
 
-    public function getIdInSubject()
-    {
-        $idInSubject = Topic::where();
-        return $idInSubject;
-
-
-    } 
+    // public function getIdInSubject($id)
+    // {
+    //     $idInSubject = Topic::find();
+    //     return $idInSubject;
+    // } 
 
     
-    public function getIdOfFirstTopicInSubject()
+    public function getIdOfFirstTopicInSubject($subjId)
     {
-        $firstidInSubject = Topic::where();
+
+        $firstidInSubject = Topic::where('subj_id', $subjId)->orderBy('id', 'asc')->limit(1)->get();
         return $firstidInSubject;
         
     } 
-    public function getIdOfLastTopicInSubject()
+    public function getIdOfLastTopicInSubject($subjId)
     {
-        $lastidInSubject = Topic::where();
+        $lastidInSubject = Topic::where('subj_id', $subjId)->orderBy('id', 'desc')->limit(1)->get();
         return $lastidInSubject;
         
     } 

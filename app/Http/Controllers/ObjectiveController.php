@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Objective;
+use App\Subject;
 use Illuminate\Http\Request;
 
 class ObjectiveController extends Controller
@@ -10,7 +11,7 @@ class ObjectiveController extends Controller
     public function getAllObjective()
     {
         $allObj = Objective::all();
-        return $allobj;
+        return $allObj;
     }
 
     public function getOneObjective($id)
@@ -19,19 +20,16 @@ class ObjectiveController extends Controller
         return $oneObject;
     }
 
-    public function getAllObjectiveInTopic($id)
+    public function getAllObjectiveInTopic($topicId)
     {
-        $allObjectiveinTopic= Objective::where();
-        return $allObjectiveinTopic;
-
-        
+        $allObjectiveinTopic = Objective::where('topic_id', $topicId)->get();
+        return $allObjectiveinTopic;        
     }
-    public function getAllObjectiveInSubject($id)
+
+    public function getAllObjectiveInSubject($subjId)
     {
-        $allObjectiveinSubj = Objective::where();
-        return $allObjectiveinSubj;
-
-
-        
+        //COMMENT: if $subjId is not found null ll be returned
+        $allObjectiveinSubj = Subject::find($subjId)->objectives()->get();
+        return $allObjectiveinSubj;        
     }
 }

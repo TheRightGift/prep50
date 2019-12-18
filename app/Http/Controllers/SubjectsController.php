@@ -27,7 +27,7 @@ class SubjectsController extends Controller
     }
     public function editSubject(Request $request, $id)
     {
-        $editSubject = Subject::where('id', $id)->first();
+        $editSubject = Subject::find($id)->first();
 
         $isDone = $editSubject->update($request->all());
 

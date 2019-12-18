@@ -17,6 +17,10 @@ class AuthController extends Controller
             'phone' => 'required|max:11|unique:users',
             'dateReg' => 'required',
             'gender' => 'required',
+            'password' => 'required',
+            'img' => 'required',
+            'totalCoinsAccrued' => 'required',
+            'totalCurrentCoin' => 'required',
             'email' => 'required|max:55|unique:users',
             'state_id' => 'required',
             'polytechnic_id' => 'required',
@@ -25,6 +29,7 @@ class AuthController extends Controller
             'regNum' => 'required|max:10'
         ]);
 
+        //$validData['']
         $user = User::create($validData);
         $accessToken = $user->createToken('authToken')->accessToken;
 

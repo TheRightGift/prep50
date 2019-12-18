@@ -19,4 +19,14 @@ class Subject extends Model
     {
         return $this->hasMany('App\Topic');
     }
+
+    public function objectives() {
+        return $this->hasManyThrough(
+            'App\Objective', 
+            'App\Topic',
+            'subj_id', //subject Id in Topics TB
+            'id', //id for subjects TB
+            'id' //id for topics TB
+        );
+    }
 }

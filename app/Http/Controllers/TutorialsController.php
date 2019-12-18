@@ -15,7 +15,7 @@ class TutorialsController extends Controller
         return $Tutorials;
 
     }
-    public function getOneTutorial()
+    public function getOneTutorial($id)
     {
 
         $oneTutorial = Tutorial::find($id);
@@ -25,12 +25,12 @@ class TutorialsController extends Controller
     public function getTutorialInObj($obj_id)
     {
 
-        $oneTutorial = Tutorial::where('obj_id',$obj_id)->get();
+        $oneTutorial = Tutorial::where('objective_id',$obj_id)->get();
         return $oneTutorial;
     }
     public function updateTutorial($tutorial_id)
     {
-        $updateTutorial = Tutorial::where('id', $ques_id)->first();
+        $updateTutorial = Tutorial::where('id', $tutorial_id)->first();
 
         $isDone = $updateTutorial->update($request->all());
 

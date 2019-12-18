@@ -15,7 +15,7 @@ class QuestionsController extends Controller
         return $questions;
 
     }
-    public function getOneQuestion()
+    public function getOneQuestion($id)
     {
         $onequestion = Question::find($id);
         return $onequestion;
@@ -23,7 +23,7 @@ class QuestionsController extends Controller
     }
     public function getQuestionInObj($obj_id)
     {
-        $onequestion = Question::where('obj_id',$obj_id)->get();
+        $onequestion = Question::where('objective_id',$obj_id)->get();
         return $onequestion;
 
     }
