@@ -43,12 +43,17 @@ class AuthController extends Controller
             'regNum' => 'required|max:10'
         ]);
 
-        if(!auth()->attempt($loginData)){
+        /*if(!auth()->attempt($loginData)){
             return response(['message' => 'Invalid credentials']);
         }
 
         $accessToken = auth()->user()->createToken('authToken')->accessToken;
 
-        return response(['user'=>auth()->user(), 'access_token'=>$accessToken]);
+        return response(['user'=>auth()->user(), 'access_token'=>$accessToken]);*/
+        $user = User::where($loginData)->with('poly', 'uni','state' , 'department')->first();
+        $accessToken = $user->createToken('authToken')->accessToken;
+        return response(['user'=>$user, 'access_token'=>$accessToken]);
     }
+
+    
 }
