@@ -17,7 +17,7 @@ class AuthController extends Controller
             'phone' => 'required|max:11|unique:users',
             'dateReg' => 'required',
             'gender' => 'required',
-            'password' => 'required',
+            //'password' => 'required',
             'img' => 'required',
             'totalCoinsAccrued' => 'required',
             'totalCurrentCoin' => 'required',
