@@ -3,7 +3,7 @@
 namespace App;
 
 use Laravel\Passport\HasApiTokens;
-use Illuminate\Contracts\Auth\MustVerifyEmail;
+//use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 
@@ -17,7 +17,7 @@ class User extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'firstname', 'othername', 'lastname', 'email', 'password', 'phone', 'dateReg', 'gender', 'img', 'totalCoinsAccrued', 'totalCurrentCoin', 'nextPayment', 'state_id', 'polytechnic_id', 'university_id', 'department_id', 'regNum'
+        'firstname', 'othername', 'lastname', 'email', 'phone', 'dateReg', 'gender', 'img', 'totalCoinsAccrued', 'totalCurrentCoin', 'nextPayment', 'state_id', 'polytechnic_id', 'university_id', 'department_id', 'regNum'
     ];
 
     /**
