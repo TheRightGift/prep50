@@ -19,7 +19,7 @@ Route::get('/subject', 'SubjectsController@getAllSubject');
 Route::get('/subject/{user_id}', 'SubjectsController@getUserSubjects');
 Route::get('/subject/{id}', 'SubjectsController@getOneSubject');
 Route::put('/updateSubject/{id}', 'SubjectsController@editSubject');
-Route::get('/subject/{id}', 'SubjectsController@deleteSubject');
+Route::delete('/subject/{id}', 'SubjectsController@deleteSubject');
 
 // // Activities controller route
 Route::get('/activities', 'ActivitiesController@getAllActivities');
