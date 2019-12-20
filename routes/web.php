@@ -11,10 +11,10 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
-// Subject controller route
+// Route::get('/', function () {
+//     return view('welcome');
+// });
+/*/ Subject controller route
 Route::get('/subject', 'SubjectsController@getAllSubject');
 Route::get('/subject/{user_id}', 'SubjectsController@getUserSubjects');
 Route::get('/subject/{id}', 'SubjectsController@getOneSubject');
@@ -54,7 +54,7 @@ Route::put('/updatetopic/{topic_id}', 'TopicsController@updateTopic');
 Route::get('/IdOfFirstTopicInSubject/{subj_id}', 'TopicsController@getIdOfFirstTopicInSubject');
 Route::get('/IdOfLastTopicInSubject/{subj_id}', 'TopicsController@getIdOfLastTopicInSubject');
 
-// register controller route
+// register controller route*/
 
-
+Route::view('/{path?}', 'welcome');
 

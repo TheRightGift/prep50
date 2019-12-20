@@ -1,0 +1,31 @@
+html, body {
+    padding: 0px;
+    margin: 0px;
+    height: 100vh;
+}
+/*Home*/
+#hmBackground {
+    background-color: blueviolet;
+    height: 100vh;
+}
+#registrationSect, #loginSect  {
+    padding: 2.5vw;
+}
+#registrationSect #gender{
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+#registrationSect.row {
+    margin-bottom: 0px;
+}
+#registrationSect form label {
+    color: rgb(218, 209, 209);
+}
+#registrationSect h2 {
+    margin-top: 0px;
+}
+#registrationSect .row {
+    margin-bottom: 5px;
+}
