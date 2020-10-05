@@ -59,4 +59,8 @@ class AuthController extends Controller
 
 
     }
+    public function getDetails()
+        {
+            return response()->json(['success' => Auth::user()]);
+        }
 }

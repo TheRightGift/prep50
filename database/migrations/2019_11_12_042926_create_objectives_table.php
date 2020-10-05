@@ -19,8 +19,10 @@ class CreateObjectivesTable extends Migration
             $table->string('title');
             $table->integer('creditLoad');
             $table->bigInteger('topic_id')->unsigned();     
+            $table->bigInteger('subject_id')->unsigned();  
             
             $table->foreign('topic_id')->references('id')->on('topics')->onUpdate('cascade');
+            $table->foreign('subject_id')->references('id')->on('subjects')->onUpdate('cascade');
         });
     }
 

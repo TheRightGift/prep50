@@ -56,5 +56,12 @@ Route::get('/IdOfLastTopicInSubject/{subj_id}', 'TopicsController@getIdOfLastTop
 
 // register controller route*/
 
-Route::view('/{path?}', 'welcome');
+// Route::view('/', 'welcome');
+// Route::get('/{any}', 'SinglePageController@index')->where('any', '.*');
 
+Auth::routes();
+Route::get('/{vue_capture?}', function () {
+    return view('layouts.app');
+  })->where('vue_capture', '[\/\w\.-]*');
+
+// Route::get('/home', 'HomeController@index')->name('home');

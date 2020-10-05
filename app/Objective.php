@@ -8,7 +8,7 @@ class Objective extends Model
 {
     //The attributes that are mass assignable.
     protected $fillable = [
-        'title', 'creditLoad', 'topic_id'
+        'title', 'creditLoad', 'topic_id', 'subject_id'
     ];
 
     public function topic()

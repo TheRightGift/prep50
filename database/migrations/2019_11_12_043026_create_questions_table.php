@@ -22,11 +22,11 @@ class CreateQuestionsTable extends Migration
             $table->text('optionC');
             $table->text('optionD');
             $table->string('answer');
-            $table->string('fileName');
-            $table->text('passage');
+            $table->string('fileName')->nullable();
+            $table->text('passage')->nullable();
             $table->year('quesYear');
             $table->tinyInteger('quesYearNum');
-            $table->text('explanation');
+            $table->text('explanation')->nullable();
             $table->bigInteger('objective_id')->unsigned();     
             
             $table->foreign('objective_id')->references('id')->on('objectives')->onUpdate('cascade');
