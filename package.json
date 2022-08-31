@@ -27,7 +27,7 @@
         "@babel/plugin-proposal-class-properties": "^7.7.4",
         "materialize-css": "^1.0.0",
         "moment": "^2.24.0",
-        "moment-timezone": "^0.5.27",
+        "moment-timezone": "^0.5.35",
         "sweetalert2": "^10.3.5",
         "vue-axios": "^2.1.5",
         "vue-quill-editor": "^3.0.6",
