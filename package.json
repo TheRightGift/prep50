@@ -33,7 +33,7 @@
         "vue-quill-editor": "^3.0.6",
         "vue-router": "^3.4.3",
         "vuedraggable": "^2.24.1",
-        "vuetify": "^2.3.10"
+        "vuetify": "^2.6.10"
     },
     "optionalDependencies": {
         "fsevents": "^2.1.3"
